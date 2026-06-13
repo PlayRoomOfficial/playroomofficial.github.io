@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PlayRoom</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    color:white;
+    overflow:hidden;
+}
+
+/* Background video */
+video{
+    position:fixed;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    z-index:-2;
+}
+
+.overlay{
+    position:fixed;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.55);
+    z-index:-1;
+}
+
+/* Top bar */
+.topbar{
+    position:fixed;
+    top:0;
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 30px;
+    backdrop-filter:blur(15px);
+    background:rgba(0,0,0,0.3);
+}
+
+.logo{
+    font-size:1.8rem;
+    font-weight:bold;
+}
+
+.nav{
+    display:flex;
+    gap:20px;
+}
+
+.nav a{
+    text-decoration:none;
+    color:white;
+    padding:8px 14px;
+    border-radius:8px;
+    transition:0.25s;
+}
+
+/* hover = text turns gray */
+.nav a:hover{
+    color:#b0b0b0;
+    background:rgba(255,255,255,0.08);
+}
+
+/* Center content */
+.center{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.center h1{
+    font-size:5rem;
+}
+
+.center p{
+    margin-top:15px;
+    max-width:600px;
+    opacity:0.9;
+}
+</style>
+</head>
+<body>
+
+<video autoplay muted loop>
+    <source src="background.mp4" type="video/mp4">
+</video>
+
+<div class="overlay"></div>
+
+<!-- TOP NAV BAR -->
+<div class="topbar">
+    <div class="logo">PlayRoom</div>
+
+    <div class="nav">
+        <a href="index.html">Home</a>
+        <a href="downloads.html">Downloads</a>
+    </div>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="center">
+    <h1>PlayRoom</h1>
+    <p>Create, explore, and download community experiences.</p>
+</div>
+
+</body>
+</html>
